@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop1.DataAccess.SQL\MyShop1.DataAccess.SQL.csproj">
+      <Project>{842614e1-8451-4ca8-91de-88c589ee10c8}</Project>
+      <Name>MyShop1.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop1.Services\MyShop1.Services.csproj">
+      <Project>{66bad0e1-fcae-463b-9867-97cb896b81da}</Project>
+      <Name>MyShop1.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
